@@ -30,4 +30,4 @@ print(f"Server response: {response}")
 
 
 #closing connection
-client_socket.close(0)
+client_socket.close()
