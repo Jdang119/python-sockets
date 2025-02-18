@@ -15,3 +15,11 @@ import socket
 #specifying address family with .AF_INET (IPV4)
 #specifying socket type with .SOCK_STREAM (TCP)
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+
+#binding socket to an IP address and port
+#setting IP address to localhost for testing
+#arg for .bind is a tuple with IP and Port - otherwise TypeError occurs 
+server_socket.bind(("127.0.0.1", 12345))
+
+
