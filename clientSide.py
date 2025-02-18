@@ -19,14 +19,14 @@ print("Connected to the server")
 
 #sending a message to the server
 #converting string to raw bytes before sending using utf-8
-message = "Hello, server!"
+message = "Hello, server! I am the client."
 client_socket.send(message.encode("utf-8"))
 
 #receiving a response from the server
 #decoding raw bytes of data from server into readable format
 #setting it to a response variable
 response = client_socket.recv(1024).decode("utf-8")
-print(f"Server response: {response}")
+print(f"Server Says: {response}")
 
 
 #closing connection

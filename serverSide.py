@@ -38,12 +38,12 @@ print(f"Connection Established with {client_address}")
 #raw bytes from message are decoded into a readable string using utf-8 encoding
 #setting received message to variable 
 message = client_socket.recv(1024).decode("utf-8")
-print (f"Received message: {message}")
+print (f"Received Message from Client: {message}")
 
 #sending a response back to the client
 #setting response message to response variable
 #sending response data back to client encoded with UTF-8
-response = "Message Received."
+response = "Message Received from Sender."
 client_socket.send(response.encode("utf-8"))
 
 #closing connections between both parties
