@@ -43,7 +43,7 @@ print (f"Received Message from Client: {message}")
 #sending a response back to the client
 #setting response message to response variable
 #sending response data back to client encoded with UTF-8
-response = "Message Received from Sender."
+response = "Message Received. Closing Connection."
 client_socket.send(response.encode("utf-8"))
 
 #closing connections between both parties
