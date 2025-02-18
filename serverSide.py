@@ -1,5 +1,5 @@
 # project pseudocode
-# Create a Socket
+# Create a Server Socket
 # Bind Socket to a specific port using .bind() (12345)
 # Listen for incoming connections
 # Accept Connection from a client
@@ -46,5 +46,6 @@ print (f"Received message: {message}")
 response = "Message Received."
 client_socket.send(response.encode("utf-8"))
 
+#closing connections between both parties
 client_socket.close()
 server_socket.close()
