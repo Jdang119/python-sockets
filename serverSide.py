@@ -23,3 +23,13 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind(("127.0.0.1", 12345))
 
 
+#listening for incoming connections
+#.listen() set to allow only (1) connection at a time
+server_socket.listen(1)
+print ("Server is listening on port 12345..")
+
+#accepting connection from a client (clientSide file)
+#.accept() waits for incomming connection, returns new socket with new connection
+client_socket, client_address = server_socket.accept()
+print(f"Connection Established with {client_address}")
+
