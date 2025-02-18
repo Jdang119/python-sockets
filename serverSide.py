@@ -33,3 +33,18 @@ print ("Server is listening on port 12345..")
 client_socket, client_address = server_socket.accept()
 print(f"Connection Established with {client_address}")
 
+#receive message from client
+#server is expecting to receieve and decode a message up to 1024 bytes 
+#raw bytes from message are decoded into a readable string using utf-8 encoding
+#setting received message to variable 
+message = client_socket.recv(1024).decode("utf-8")
+print (f"Received message: {message}")
+
+#sending a response back to the client
+#setting response message to response variable
+#sending response data back to client encoded with UTF-8
+response = "Message Received."
+client_socket.send(response.encode("utf-8"))
+
+client_socket.close()
+server_socket.close()
